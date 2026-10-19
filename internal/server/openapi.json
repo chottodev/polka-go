@@ -1,0 +1,143 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Polka",
+    "description": "Placeholder API (SVG + stock raster) — Go port",
+    "version": "1.0.5"
+  },
+  "servers": [{ "url": "/" }],
+  "paths": {
+    "/health": {
+      "get": {
+        "tags": ["System"],
+        "summary": "Health check",
+        "operationId": "getHealth",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string" },
+                    "service": { "type": "string" },
+                    "version": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/wxh/{width}/{height}": {
+      "get": {
+        "tags": ["WxH"],
+        "summary": "SVG placeholder",
+        "operationId": "getWxhPlaceholder",
+        "parameters": [
+          { "name": "width", "in": "path", "required": true, "schema": { "type": "integer", "minimum": 1 } },
+          { "name": "height", "in": "path", "required": true, "schema": { "type": "integer", "minimum": 1 } },
+          { "name": "bg", "in": "query", "schema": { "type": "string" } },
+          { "name": "fg", "in": "query", "schema": { "type": "string" } },
+          { "name": "text", "in": "query", "schema": { "type": "string" } },
+          { "name": "rounded", "in": "query", "schema": { "type": "integer", "minimum": 0 } },
+          { "name": "font", "in": "query", "schema": { "type": "integer" } },
+          { "name": "family", "in": "query", "schema": { "type": "string" } },
+          { "name": "gradient", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "SVG", "content": { "image/svg+xml": { "schema": { "type": "string" } } } },
+          "400": { "description": "Bad request" }
+        }
+      }
+    },
+    "/wxh/{width}/{height}/{text}": {
+      "get": {
+        "tags": ["WxH"],
+        "summary": "SVG placeholder with text in path",
+        "operationId": "getWxhPlaceholderWithText",
+        "parameters": [
+          { "name": "width", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "height", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "text", "in": "path", "required": true, "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "SVG", "content": { "image/svg+xml": { "schema": { "type": "string" } } } }
+        }
+      }
+    },
+    "/avatars/initials/{text}": {
+      "get": {
+        "tags": ["Avatars"],
+        "summary": "Initials avatar SVG",
+        "operationId": "getAvatarInitials",
+        "parameters": [
+          { "name": "text", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "size", "in": "query", "schema": { "type": "integer" } },
+          { "name": "palette", "in": "query", "schema": { "type": "string" } },
+          { "name": "bg", "in": "query", "schema": { "type": "string" } },
+          { "name": "fg", "in": "query", "schema": { "type": "string" } },
+          { "name": "family", "in": "query", "schema": { "type": "string" } },
+          { "name": "font", "in": "query", "schema": { "type": "integer" } }
+        ],
+        "responses": {
+          "200": { "description": "SVG", "content": { "image/svg+xml": { "schema": { "type": "string" } } } }
+        }
+      }
+    },
+    "/avatars/vector/{kind}": {
+      "get": {
+        "tags": ["Avatars"],
+        "summary": "Vector avatar SVG",
+        "operationId": "getAvatarVector",
+        "parameters": [
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "enum": ["man", "male", "female", "cat", "dog", "panda", "fox"] }
+          },
+          { "name": "size", "in": "query", "schema": { "type": "integer" } },
+          { "name": "palette", "in": "query", "schema": { "type": "string" } },
+          { "name": "style", "in": "query", "schema": { "type": "string" } },
+          { "name": "bg", "in": "query", "schema": { "type": "string" } },
+          { "name": "fg", "in": "query", "schema": { "type": "string" } },
+          { "name": "seed", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "SVG", "content": { "image/svg+xml": { "schema": { "type": "string" } } } }
+        }
+      }
+    },
+    "/stock/{width}/{height}/{query}": {
+      "get": {
+        "tags": ["Stock"],
+        "summary": "Stock raster image via Freepik",
+        "operationId": "getStockImage",
+        "parameters": [
+          { "name": "width", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "height", "in": "path", "required": true, "schema": { "type": "integer" } },
+          { "name": "query", "in": "path", "required": true, "schema": { "type": "string" } },
+          { "name": "fit", "in": "query", "schema": { "type": "string", "enum": ["cover", "contain", "inside"] } },
+          { "name": "format", "in": "query", "schema": { "type": "string", "enum": ["webp", "jpeg", "png"] } },
+          { "name": "quality", "in": "query", "schema": { "type": "integer", "minimum": 1, "maximum": 100 } },
+          { "name": "provider", "in": "query", "schema": { "type": "string", "enum": ["freepik"] } },
+          { "name": "seed", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": {
+            "description": "Image",
+            "content": {
+              "image/webp": { "schema": { "type": "string", "format": "binary" } },
+              "image/jpeg": { "schema": { "type": "string", "format": "binary" } },
+              "image/png": { "schema": { "type": "string", "format": "binary" } }
+            }
+          },
+          "400": { "description": "Bad request" }
+        }
+      }
+    }
+  }
+}

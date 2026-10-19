@@ -1,0 +1,8 @@
+{
+  "name": "@polka/generator",
+  "version": "1.0.5",
+  "private": true,
+  "description": "SVG placeholder generators for Polka",
+  "main": "generator.js",
+  "license": "ISC"
+}

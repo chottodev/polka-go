@@ -1,0 +1,7 @@
+/.env
+/.cache/
+/bin/
+*.exe
+*.test
+*.out
+/vendor/

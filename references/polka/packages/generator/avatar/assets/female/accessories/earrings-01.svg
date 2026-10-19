@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1028 1024">
+  <!-- left earring: ear at ~(322, 525) -->
+  <g transform="translate(322, 525) scale(2.6) translate(-15, 0)">
+    <g transform="translate(-744 -372)">
+      <circle cx="13" cy="13" r="13" transform="translate(746 408)" fill="#1b8cff" opacity="0.3"/>
+      <circle cx="13" cy="13" r="13" transform="translate(746 408)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="4"/>
+      <circle cx="7" cy="7" r="7" transform="translate(752 387)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="3" cy="3" r="3" transform="translate(756 391)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="2" cy="2" r="2" transform="translate(757 373)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <line y1="11" transform="translate(759 376)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <line y1="7" transform="translate(759 401)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="4" y2="6" transform="translate(755 408)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x1="4" y1="6" transform="translate(759 408)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x2="4" transform="translate(746 420)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x2="4" transform="translate(768 420)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line y1="4" transform="translate(759 430)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle cx="3" cy="3" r="3" transform="translate(757 417)" fill="#ffffff" opacity="0.5"/>
+    </g>
+  </g>
+  <!-- right earring: ear at ~(730, 525) -->
+  <g transform="translate(730, 525) scale(2.6) translate(-15, 0)">
+    <g transform="translate(-780 -372)">
+      <circle cx="13" cy="13" r="13" transform="translate(780 408)" fill="#1b8cff" opacity="0.3"/>
+      <circle cx="13" cy="13" r="13" transform="translate(780 408)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="4"/>
+      <circle cx="7" cy="7" r="7" transform="translate(786 387)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="3" cy="3" r="3" transform="translate(790 391)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <circle cx="2" cy="2" r="2" transform="translate(791 373)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <line y1="11" transform="translate(793 376)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <line y1="7" transform="translate(793 401)" fill="none" stroke="#1b8cff" stroke-miterlimit="10" stroke-width="2"/>
+      <line x1="4" y2="6" transform="translate(789 408)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x1="4" y1="6" transform="translate(793 408)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x2="4" transform="translate(780 420)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line x2="4" transform="translate(802 420)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line y1="4" transform="translate(793 430)" fill="none" stroke="#1b8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle cx="3" cy="3" r="3" transform="translate(791 417)" fill="#ffffff" opacity="0.5"/>
+    </g>
+  </g>
+</svg>

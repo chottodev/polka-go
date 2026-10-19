@@ -1,0 +1,11 @@
+{
+  "name": "@polka/config",
+  "version": "1.0.5",
+  "private": true,
+  "description": "Shared env-backed config for Polka (dotenv)",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
