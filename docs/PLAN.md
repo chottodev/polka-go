@@ -1,6 +1,6 @@
 # План: Polka → Go (`polka-go`)
 
-Референс: [chottodev/polka](https://github.com/chottodev/polka) (скопирован в `references/polka`).
+Референс: [chottodev/polka](https://github.com/chottodev/polka).
 
 ## Цель
 
@@ -31,17 +31,15 @@ internal/stock/         — Freepik, disk cache, resize, fallback
 internal/server/        — chi router, handlers, CORS, static, OpenAPI
 web/static/             — SPA-конструкторы (HTML/JS)
 docs/PLAN.md            — этот план
-references/polka/       — исходный JS-репозиторий
 ```
 
 ## Этапы
 
-1. **Референс** — clone в `references/polka`.
-2. **Generator** — порт `@polka/generator` + SVG assets через `embed`.
-3. **Config / Stock** — dotenv-эквивалент, Freepik client, sha1-кеш, resize (cover/contain/inside → webp/jpeg/png).
-4. **HTTP** — маршруты 1:1, `/docs` + `/openapi.json`, SPA fallback.
-5. **Тесты** — generator unit, stock cache/resize, HTTP smoke (`httptest`).
-6. **Сборка** — `go test ./...`, `go build -o bin/polka ./cmd/polka`.
+1. **Generator** — порт `@polka/generator` + SVG assets через `embed`.
+2. **Config / Stock** — dotenv-эквивалент, Freepik client, sha1-кеш, resize (cover/contain/inside → webp/jpeg/png).
+3. **HTTP** — маршруты 1:1, `/docs` + `/openapi.json`, SPA fallback.
+4. **Тесты** — generator unit, stock cache/resize, HTTP smoke (`httptest`).
+5. **Сборка** — `go test ./...`, `go build -o bin/polka ./cmd/polka`.
 
 ## Замены стека
 

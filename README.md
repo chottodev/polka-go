@@ -2,7 +2,7 @@
 
 HTTP-сервис **placeholder-контента** на Go: плейсхолдеры **WxH** (SVG), **аватары** (SVG), **сток** (Freepik + ресайз + кеш). Порт [chottodev/polka](https://github.com/chottodev/polka).
 
-Исходный репозиторий лежит в `references/polka`. План порта: [docs/PLAN.md](docs/PLAN.md).
+План порта: [docs/PLAN.md](docs/PLAN.md).
 
 ## Быстрый старт
 

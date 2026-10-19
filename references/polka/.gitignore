@@ -1,6 +1,0 @@
-.env
-node_modules
-**/dist
-apps/server/public
-.DS_Store
-.cache
